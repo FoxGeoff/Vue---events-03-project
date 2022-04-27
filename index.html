@@ -23,8 +23,17 @@
       <button v-on:click="subtract(10)">Subtract 10</button>
       <p>Result: {{counter}}</p>
       <!-- '$event' is optional for one parameter -->
-      <input type="text" v-on:input="setName($event)">
+      <input type="text" v-on:input="setName($event)" />
       <p>Your name: {{name}}</p>
+      <!-- Preventing form submit to server #1 -->
+      <form v-on:submit="myFormSubmit">
+        <button>submit</button>
+      </form>
+      <!-- Preventing form submit to server #2 
+        We also have 'click.right'... -->
+      <form v-on:submit.prevent="myFormSubmitBeter">
+        <button>submit better</button>
+      </form>
     </section>
   </body>
 </html>

@@ -9,6 +9,14 @@ const app = Vue.createApp({
     };
   },
   methods: {
+    myFormSubmitBeter() {
+      alert('A better form submit');
+    },
+    myFormSubmit(event) {
+      alert('mySubmit');
+      // stops form submit to server
+      event.preventDefault();
+    },
     setName(event) {
       // this straight Javascript '$event' is being passed
       // note dev tool  F12 shows 'fashing' changes in code
