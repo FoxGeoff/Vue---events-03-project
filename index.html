@@ -24,7 +24,8 @@
       <p>Result: {{counter}}</p>
       <!-- '$event' is optional for one parameter -->
       <input type="text" v-on:input="setName($event)" />
-      <p>Your name: {{name}}</p>
+      <!-- Use computed properties rather then methods to output a value -->
+      <p>Your name: {{fullName}}</p>
       <!-- Preventing form submit to server #1 -->
       <form v-on:submit="myFormSubmit">
         <button>submit</button>

@@ -8,6 +8,15 @@ const app = Vue.createApp({
       name:''
     };
   },
+  // These are funtion wihich act like methods. Avoiding reloads
+  computed: {
+    fullName() {
+      if(this.name === '') {
+        return '';
+      }
+      return this.name + ' Fox';
+    }
+  },
   methods: {
     myFormSubmitBeter() {
       alert('A better form submit');
