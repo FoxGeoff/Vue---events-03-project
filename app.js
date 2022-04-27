@@ -1,20 +1,20 @@
 /**
- * File app.js 
+ * File app.js
  */
 const app = Vue.createApp({
   data() {
     return {
-      counter:0
+      counter: 0,
     };
   },
   methods: {
-    add() {
-      this.counter++;
+    add(num) {
+      this.counter += num;
     },
-    subtract() {
-      this.counter--;
-    }
-  } 
+    subtract(num) {
+      this.counter -= num;
+    },
+  },
 });
 
-app.mount('#events');
+app.mount("#events");
