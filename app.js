@@ -12,7 +12,7 @@ const app = Vue.createApp({
     //exe when 'name' prop changes. no return.
     // watch has name(newNameVal, oldNameVal) built in
     // This would replace the computed property 'fullName'
-    name(val) {
+    name (val) {
      this.fullName = val + " Shwali";
     },
   },
